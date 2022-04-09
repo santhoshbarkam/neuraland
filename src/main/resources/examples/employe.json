@@ -1,0 +1,17 @@
+[
+{
+
+    "employe_id"  : "S100348",
+    "employee_base_location"  : " Hyderabad",
+    "employee_name" : " santhosh barkam ",
+    "dob"  : "11-11-1997"
+  },
+  {
+
+
+    "employe_id"  : "X100348",
+    "employee_base_location"  : " MADHAPUR",
+    "employee_name"  : " VURADI MAHENDER ",
+    "dob"  : "1997-11-11"
+    }
+    ]

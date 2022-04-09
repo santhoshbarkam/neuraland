@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="employee" format="json">
+      <types:shape format="weave" example="examples/employe.json"><![CDATA[%dw 2.0
+
+type employee = Array<{|  employe_id: String,   employee_base_location: String,   employee_name: String,   dob: String|}> {"example": "[{\\\"employe_id\\\":\\\"S100348\\\",\\\"employee_base_location\\\":\\\" Hyderabad\\\",\\\"employee_name\\\":\\\" santhosh barkam \\\",\\\"dob\\\":\\\"11-11-1997\\\"},{\\\"employe_id\\\":\\\"X100348\\\",\\\"employee_base_location\\\":\\\" MADHAPUR\\\",\\\"employee_name\\\":\\\" VURADI MAHENDER \\\",\\\"dob\\\":\\\"1997-11-11\\\"}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#138b073a-2741-418e-818c-d8f2c40c701e">
+    <types:processor-declaration>
+      <types:input-event>
+        <types:message>
+          <types:payload type="employee"/>
+        </types:message>
+      </types:input-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
